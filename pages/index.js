@@ -26,14 +26,14 @@ export default function Home() {
             <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
                 <section className="min-h-screen">
                     <nav className="py-3 mb-3 flex justify-between md:mb-4 md:py-4">
-                        <h1 className="text-xl dark:text-gray-200 font-bold">
+                        <h1 className="text-xl text-gray-800 dark:text-gray-200 font-bold">
                             Welcome
                         </h1>
                         <ul className="flex items-center">
                             <li>
                                 <BsFillMoonStarsFill
                                     onClick={() => setDarkMode(!darkMode)}
-                                    className="cursor-pointer text-2xl dark:text-gray-200"
+                                    className="cursor-pointer text-2xl text-gray-800 dark:text-gray-200"
                                 />
                             </li>
                             <li>
@@ -63,8 +63,12 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="text-5xl flex justify-center gap-8 py-1 text-gray-600 md:py-3 lg:py-3">
-                        <AiFillLinkedin />
-                        <AiFillGithub />
+                        <a href="https://www.linkedin.com/in/abosanac/">
+                            <AiFillLinkedin />
+                        </a>
+                        <a href="https://github.com/Lebedev225">
+                            <AiFillGithub />
+                        </a>
                     </div>
                     <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-5 overflow-hidden ">
                         <Image
@@ -76,7 +80,7 @@ export default function Home() {
                 </section>
                 <section>
                     <div>
-                        <h3 className="text-3xl py-1 dark:text-teal-600">
+                        <h3 className="text-3xl py-1 text-gray-800 dark:text-teal-600">
                             Portfolio
                         </h3>
                         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
