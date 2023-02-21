@@ -26,14 +26,14 @@ export default function Home() {
             <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
                 <section className="min-h-screen">
                     <nav className="py-3 mb-3 flex justify-between md:mb-4 md:py-4">
-                        <h1 className="text-xl text-gray-800 dark:text-gray-200 font-bold">
+                        <h1 className="text-2xl text-gray-700 dark:text-gray-200 font-medium">
                             Welcome
                         </h1>
                         <ul className="flex items-center">
                             <li>
                                 <BsFillMoonStarsFill
                                     onClick={() => setDarkMode(!darkMode)}
-                                    className="cursor-pointer text-2xl text-gray-800 dark:text-gray-200"
+                                    className="cursor-pointer text-2xl text-gray-700 dark:text-gray-200"
                                 />
                             </li>
                             <li>
@@ -51,10 +51,10 @@ export default function Home() {
                         <h2 className="text-5xl py-2 text-teal-600 font-medium">
                             Andrej Bosanac
                         </h2>
-                        <h3 className="text-2xl py-2 md:text-3xl dark:text-gray-200">
+                        <h3 className="text-2xl py-2 md:text-3xl text-gray-800 dark:text-gray-200">
                             Software Developer
                         </h3>
-                        <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
+                        <p className="text-md py-2 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
                             Welcome to my personal website! Here, you'll find
                             information about me, my background, and my
                             interests. I'm excited to share my experiences and
@@ -80,28 +80,28 @@ export default function Home() {
                 </section>
                 <section>
                     <div>
-                        <h3 className="text-3xl py-1 text-gray-800 dark:text-teal-600">
+                        <h3 className="text-3xl py-1 font-medium text-gray-800 dark:text-teal-600">
                             Portfolio
                         </h3>
-                        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Accusamus veritatis molestias, explicabo illo
-                            aspernatur ducimus dicta totam possimus eligendi
-                            voluptatem alias repudiandae voluptate incidunt iste
-                            itaque ullam optio facilis quidem, deserunt odio
-                            amet libero nemo adipisci! Cum quae repudiandae,
-                            soluta voluptate ut reprehenderit, est optio
-                            eligendi, iure dolor numquam ex?
+                        <p className="text-md py-1 leading-8 text-gray-800 dark:text-gray-200">
+                            Below you can find several side projects that I have
+                            been working on.
                         </p>
-                        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Quas repellendus harum dolore nobis eveniet
-                            recusandae laborum quidem facere beatae rerum.
+                        <p className="text-md leading-8  text-gray-800 dark:text-gray-200">
+                            You can check out the live demo or take a look at
+                            the code by clicking one of the buttons below each
+                            of the projects.
                         </p>
                     </div>
 
                     <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
                         <div className="basis-1/3 flex-1">
+                            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                                Machine Learning Data Analyses
+                            </p> */}
+                            <h3 className="text-3xl pb-4 font-medium text-gray-800 dark:text-teal-600">
+                                Machine Learning Data Analyses
+                            </h3>
                             <Image
                                 src={stock}
                                 className="rounded-lg object-cover"
@@ -109,8 +109,47 @@ export default function Home() {
                                 height={"100%"}
                                 responsive
                             />
+                            {/* buttons for live demo and code */}
+                            <div className="text-l flex justify-left py-3 text-gray-600 md:py-3 lg:py-3">
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md "
+                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                >
+                                    Live Demo
+                                </a>
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-2"
+                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                >
+                                    Code
+                                </a>
+                            </div>
+                            <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                                <ul className="list-disc px-5">
+                                    <li>
+                                        Developed a Support Vector Machine that
+                                        predicts insurance expenses for an
+                                        insurance agency
+                                    </li>
+                                    <li>
+                                        Implemented Association Rule Mining
+                                        algorithm to discover patterns in
+                                        Walmart customers purchases
+                                    </li>
+                                    <li>
+                                        Trained Neural Network model that
+                                        predicts whether a person in SF area
+                                        rides a train or not with 90% accuracy
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div className="basis-1/3 flex-1">
+                            <h3 className="text-3xl pb-4 font-medium text-gray-800 dark:text-teal-600">
+                                Online Store
+                            </h3>
+
                             <Image
                                 src={stock}
                                 className="rounded-lg object-cover"
@@ -118,6 +157,41 @@ export default function Home() {
                                 height={"100%"}
                                 responsive
                             />
+                            {/* buttons for live demo and code */}
+                            <div className="text-l flex justify-left py-3 text-gray-600 md:py-3 lg:py-3">
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md "
+                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                >
+                                    Live Demo
+                                </a>
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-2"
+                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                >
+                                    Code
+                                </a>
+                            </div>
+                            <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                                <ul className="list-disc px-5">
+                                    <li>
+                                        Developed a web application using
+                                        JavaScript with React as the front-end
+                                    </li>
+                                    <li>
+                                        Implemented user authentication and
+                                        integrated Stripe payment processing
+                                    </li>
+                                    <li>
+                                        Created sorting, filtering, and cart
+                                        functionalities
+                                    </li>
+                                    <li>
+                                        Deployed web application on AWS cloud
+                                        service
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="basis-1/3 flex-1">
                             <Image
@@ -131,6 +205,12 @@ export default function Home() {
                     </div>
                 </section>
             </main>
+
+            <footer className="bg-white text-center dark:bg-gray-900 lg:text-left">
+                <div className="p-4 text-center text-gray-800 dark:text-gray-200">
+                    © 2023 Andrej Bosanac
+                </div>
+            </footer>
         </div>
     );
 }
