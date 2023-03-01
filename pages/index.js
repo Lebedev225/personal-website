@@ -5,6 +5,8 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import headshot from "../public/headshot-transparent.png";
 import stock from "../public/stock.png";
+import machine from "../public/machine-learning.jpg";
+import scraper from "../public/raspberrypi.jpg";
 import { useState } from "react";
 
 export default function Home() {
@@ -80,17 +82,45 @@ export default function Home() {
                 </section>
                 <section>
                     <div>
-                        <h3 className="text-3xl py-1 font-medium text-gray-800 dark:text-teal-600">
+                        <h3 className="text-4xl py-1 font-medium text-teal-600">
+                            About Me
+                        </h3>
+                        <p className="text-md py-3 leading-6 text-gray-800 dark:text-gray-200">
+                            I graduated from California State University Long
+                            Beach with a bachelor's in Management Information
+                            Systems. For four years, I was a student-athlete
+                            studying full time while competing at the highest
+                            level (Division I Water Polo).
+                        </p>
+                        <p className="text-md leading-6 py-3 text-gray-800 dark:text-gray-200">
+                            I had passion for technology since young age. I
+                            enjoyed taking computers apart and exploring
+                            functionalities of the operating system. Now I spend
+                            my time writing software for data analysis,
+                            automation, robotics and front-end.
+                        </p>
+                        <p className="text-md leading-6 py-3 text-gray-800 dark:text-gray-200">
+                            When the Wi-Fi is not working, I enjoy rock
+                            climbing, volleyball, baking and playing board games
+                            with friends.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-4xl py-3 font-medium text-teal-600">
                             Portfolio
                         </h3>
-                        <p className="text-md py-1 leading-8 text-gray-800 dark:text-gray-200">
+                        <p className="text-md py-3 leading-6 text-gray-800 dark:text-gray-200">
                             Below you can find several side projects that I have
-                            been working on.
+                            been working on. Some of them are completed, others
+                            are still work in progress, so make sure to check
+                            back later!
                         </p>
-                        <p className="text-md leading-8  text-gray-800 dark:text-gray-200">
-                            You can check out the live demo or take a look at
-                            the code by clicking one of the buttons below each
-                            of the projects.
+                        <p className="text-md leading-6  py-3 text-gray-800 dark:text-gray-200">
+                            COMING SOON - Figuring out the best way to host them
+                            at the moment
+                            {/* (You can check out the live demo or take
+                            a look at the code by clicking one of the buttons
+                            below each of the projects). */}
                         </p>
                     </div>
 
@@ -99,18 +129,18 @@ export default function Home() {
                             {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                                 Machine Learning Data Analyses
                             </p> */}
-                            <h3 className="text-3xl pb-4 font-medium text-gray-800 dark:text-teal-600">
+                            <h3 className="text-3xl pb-4 font-medium text-teal-600">
                                 Machine Learning Data Analyses
                             </h3>
                             <Image
-                                src={stock}
+                                src={machine}
                                 className="rounded-lg object-cover"
                                 width={"100%"}
                                 height={"100%"}
                                 responsive
                             />
                             {/* buttons for live demo and code */}
-                            <div className="text-l flex justify-left py-3 text-gray-600 md:py-3 lg:py-3">
+                            <div className="text-l flex justify-left pt-3 text-gray-600 md:py-3 lg:py-3">
                                 <a
                                     className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md "
                                     href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
@@ -119,7 +149,7 @@ export default function Home() {
                                 </a>
                                 <a
                                     className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-2"
-                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                    href="https://github.com/Lebedev225/web-scraper"
                                 >
                                     Code
                                 </a>
@@ -146,10 +176,53 @@ export default function Home() {
                         </div>
 
                         <div className="basis-1/3 flex-1">
-                            <h3 className="text-3xl pb-4 font-medium text-gray-800 dark:text-teal-600">
-                                Online Store
+                            <h3 className="text-3xl pb-4 font-medium  text-teal-600">
+                                Web Scraper
                             </h3>
 
+                            <Image
+                                src={scraper}
+                                className="rounded-lg object-cover"
+                                width={"100%"}
+                                height={"100%"}
+                                responsive
+                            />
+                            {/* buttons for live demo and code */}
+                            <div className="text-l flex justify-left pt-3 text-gray-600 md:py-3 lg:py-3">
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md "
+                                    href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
+                                >
+                                    Live Demo
+                                </a>
+                                <a
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-2"
+                                    href="https://github.com/Lebedev225/web-scraper"
+                                >
+                                    Code
+                                </a>
+                            </div>
+                            <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                                <ul className="list-disc px-5">
+                                    <li>
+                                        Created a Python script that checks
+                                        whether a product is in stock
+                                    </li>
+                                    <li>
+                                        Used Twilio service to send a text
+                                        message whenever the product is in stock
+                                    </li>
+                                    <li>
+                                        The script is running as a Cron job on a
+                                        Linux machine at 5 minute intervals
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="basis-1/3 flex-1">
+                            <h3 className="text-3xl pb-4 font-medium  text-teal-600">
+                                Online Store
+                            </h3>
                             <Image
                                 src={stock}
                                 className="rounded-lg object-cover"
@@ -157,8 +230,7 @@ export default function Home() {
                                 height={"100%"}
                                 responsive
                             />
-                            {/* buttons for live demo and code */}
-                            <div className="text-l flex justify-left py-3 text-gray-600 md:py-3 lg:py-3">
+                            <div className="text-l flex justify-left pt-3 text-gray-600 md:py-3 lg:py-3">
                                 <a
                                     className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md "
                                     href="https://personal-website123214531.s3.us-west-2.amazonaws.com/Andrej+Bosanac+Resume.pdf"
@@ -193,22 +265,16 @@ export default function Home() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="basis-1/3 flex-1">
-                            <Image
-                                src={stock}
-                                className="rounded-lg object-cover"
-                                width={"100%"}
-                                height={"100%"}
-                                responsive
-                            />
-                        </div>
                     </div>
                 </section>
             </main>
 
             <footer className="bg-white text-center dark:bg-gray-900 lg:text-left">
-                <div className="p-4 text-center text-gray-800 dark:text-gray-200">
-                    © 2023 Andrej Bosanac
+                <div className="pb-4 text-center text-gray-800 dark:text-gray-200">
+                    © 2023 Andrej Bosanac{"    "}
+                    <a href="mailto:andrejbosanac225@gmail.com">
+                        andrejbosanac225@gmail.com
+                    </a>
                 </div>
             </footer>
         </div>
